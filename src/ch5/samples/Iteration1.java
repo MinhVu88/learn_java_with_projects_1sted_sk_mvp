@@ -1,5 +1,5 @@
 // Figure 5.3 
-package ch5.codes;
+package ch5.samples;
 
 import java.util.Scanner;
 

@@ -1,6 +1,6 @@
-package ch10.exercises;
+package ch9.project;
 
-public class E10_0 {
+public class Project9 {
 	public static void main(String[] args) {
 		
 	}

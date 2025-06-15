@@ -3,39 +3,39 @@ package ch14.samples;
 
 @FunctionalInterface
 interface FunctionalInterfaceDemo {
-	void demo();
+	void getTheOnlyAbstractMethod();
 
-	default void showDefaultMethod0() {
-		System.out.println("default method #0 in functional interface");
+	default void getDefaultMethod0() {
+		System.out.println("getDefaultMethod0() | FunctionalInterfaceDemo");
 	}
 
-	default void showDefaultMethod1() {
-		System.out.println("default method #1 in functional interface");
+	default void getDefaultMethod1() {
+		System.out.println("getDefaultMethod1() | FunctionalInterfaceDemo");
 	}
 
-	static void showStaticMethod0() {
-		System.out.println("static method #0 in functional interface");
+	static void getStaticMethod0() {
+		System.out.println("getStaticMethod0() | FunctionalInterfaceDemo");
 	}
 
-	static void showStaticMethod1() {
-		System.out.println("static method #1 in functional interface");
+	static void getStaticMethod1() {
+		System.out.println("getStaticMethod1() | FunctionalInterfaceDemo");
 	}
 }
 
 public class BasicLambdas0 {
 	public static void main(String[] args) {
 		FunctionalInterfaceDemo lambda0 = () -> {
-			System.out.println("lambda0 calling demo, the only abstract method in FunctionalInterfaceDemo");
+			System.out.println("lambda0 | getTheOnlyAbstractMethod() | FunctionalInterfaceDemo");
 		};
 
-		lambda0.demo();
-		lambda0.showDefaultMethod0();
-		FunctionalInterfaceDemo.showStaticMethod0();
+		lambda0.getTheOnlyAbstractMethod();
+		lambda0.getDefaultMethod0();
+		FunctionalInterfaceDemo.getStaticMethod0();
 
-		FunctionalInterfaceDemo lambda1 = () -> System.out.println("lambda1 calling demo, the only abstract method in FunctionalInterfaceDemo");
+		FunctionalInterfaceDemo lambda1 = () -> System.out.println("lambda1 | getTheOnlyAbstractMethod() | FunctionalInterfaceDemo");
 		
-		lambda1.demo();
-		lambda1.showDefaultMethod1();
-		FunctionalInterfaceDemo.showStaticMethod1();
+		lambda1.getTheOnlyAbstractMethod();
+		lambda1.getDefaultMethod1();
+		FunctionalInterfaceDemo.getStaticMethod1();
 	}
 }

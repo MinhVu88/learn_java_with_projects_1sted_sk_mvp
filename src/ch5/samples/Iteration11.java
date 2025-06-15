@@ -1,5 +1,5 @@
 // Figure 5.17      
-package ch5.codes;
+package ch5.samples;
 
 public class Iteration11 {
 	public static void main(String[] args) {
